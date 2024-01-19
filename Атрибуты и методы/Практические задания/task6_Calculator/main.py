@@ -1,5 +1,16 @@
 class Calculator:
-    ...  # TODO написать статические методы
+
+    """Вычисляет"""
+
+    @staticmethod
+    def add(a, b):
+        """ Формула площади по двум сторонам и углу между ними. """
+        return a + b
+
+    @staticmethod
+    def mul(a, b):
+        """ Формула площади по двум сторонам и углу между ними. """
+        return a * b
 
 
 if __name__ == "__main__":
