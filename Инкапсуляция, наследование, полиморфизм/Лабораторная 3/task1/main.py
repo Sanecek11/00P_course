@@ -35,7 +35,7 @@ class PaperBook(Book):
             raise TypeError("число страниц может быть только числовым значением")
         if value <= 0:
             raise ValueError("число страниц не может быть меньше нуля")
-        self._pages = value
+        self.pages = value
 
     def __str__(self):
         return f"Книга {self._name}. Автор {self._author}. Cтраницы: {self._pages}"
@@ -48,7 +48,7 @@ class AudioBook(Book):
     """ Дочерний класс базовой книги"""
     def __init__(self, name: str, author: str, duration: float):
         super().__init__(name=name, author=author)
-        self._duration = duration
+        self.duration = duration
 
     @property
     def duration(self):
