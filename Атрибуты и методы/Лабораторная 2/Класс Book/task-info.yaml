@@ -17,7 +17,7 @@ files:
     length: 144
     placeholder_text: '# TODO написать класс Book'
     initial_state:
-      length: 26
+      length: 144
       offset: 188
     initialized_from_dependency: false
     selected: true
