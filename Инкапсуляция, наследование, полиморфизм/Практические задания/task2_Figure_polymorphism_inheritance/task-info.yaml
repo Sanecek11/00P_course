@@ -3,14 +3,14 @@ files:
 - name: main.py
   visible: true
   placeholders:
-  - offset: 238
-    length: 0
+  - offset: 234
+    length: 184
     placeholder_text: "...  # TODO определить конструктор и перегрузить метод area"
     initial_state:
       length: 59
       offset: 238
     initialized_from_dependency: false
-    selected: false
+    selected: true
     status: Solved
     encrypted_possible_answer: |-
       def __init__(self, a, b):
@@ -20,8 +20,8 @@ files:
           def area(self):
               print(f"Вызван метод класса {self.__class__.__name__}")
               return self.a * self.b
-  - offset: 238
-    length: 0
+  - offset: 234
+    length: 184
     placeholder_text: "...  # TODO определить конструктор и перегрузить метод area"
     initial_state:
       length: 59
