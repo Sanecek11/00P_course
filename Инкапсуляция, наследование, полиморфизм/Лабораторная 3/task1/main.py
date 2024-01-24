@@ -23,7 +23,7 @@ class PaperBook(Book):
     """ Дочерний класс базовой книги"""
     def __init__(self, name: str, author: str, pages: int):
         super().__init__(name=name, author=author)
-        self._pages = pages
+        self.pages = pages
 
     @property
     def pages(self):
@@ -60,7 +60,7 @@ class AudioBook(Book):
             raise TypeError("время продолжительности книги может быть только числовым значением")
         if value <= 0:
             raise ValueError("время продолжительности книги не может быть меньше нуля")
-        self._duration = value
+        self.duration = value
 
     def __str__(self):
         return f"Книга {self._name}. Автор {self._author}. Продолжительность: {self._duration} часов"
