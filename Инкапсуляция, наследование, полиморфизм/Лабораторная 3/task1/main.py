@@ -27,7 +27,7 @@ class PaperBook(Book):
 
     @property
     def pages(self):
-        return self._pages
+        return self.pages
 
     @pages.setter
     def pages(self, value):
@@ -35,24 +35,24 @@ class PaperBook(Book):
             raise TypeError("число страниц может быть только числовым значением")
         if value <= 0:
             raise ValueError("число страниц не может быть меньше нуля")
-        self._pages = value
+        self.pages = value
 
     def __str__(self):
-        return f"Книга {self._name}. Автор {self._author}. Cтраницы: {self._pages}"
+        return f"Книга {self._name}. Автор {self._author}. Cтраницы: {self.pages}"
 
     def __repr__(self):
-        return f"{self.__class__.__name__}(name={self._name!r}, author={self._author!r}, pages={self._pages!r})"
+        return f"{self.__class__.__name__}(name={self._name!r}, author={self._author!r}, pages={self.pages!r})"
 
 
 class AudioBook(Book):
     """ Дочерний класс базовой книги"""
     def __init__(self, name: str, author: str, duration: float):
         super().__init__(name=name, author=author)
-        self._duration = duration
+        self.duration = duration
 
     @property
     def duration(self):
-        return self._duration
+        return self.duration
 
     @duration.setter
     def duration(self, value):
@@ -63,7 +63,7 @@ class AudioBook(Book):
         self.duration = value
 
     def __str__(self):
-        return f"Книга {self._name}. Автор {self._author}. Продолжительность: {self._duration} часов"
+        return f"Книга {self._name}. Автор {self._author}. Продолжительность: {self.duration} часов"
 
     def __repr__(self):
-        return f"{self.__class__.__name__}(name={self._name!r}, author={self._author!r}, duration={self._duration!r})"
+        return f"{self.__class__.__name__}(name={self._name!r}, author={self._author!r}, duration={self.duration!r})"
